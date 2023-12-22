@@ -6,23 +6,23 @@
   <title>Login - Car Dealership</title>
   <link rel="stylesheet" href="CSS/rac.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="JS/rac.js"></script>
+  {{-- <script src="JS/rac.js"></script> --}}
   <?php
-    if(isset($_POST["text-input"]) && isset($_POST["text-input"]))
-    {
+    // if(isset($_POST["text-input"]) && isset($_POST["text-input"]))
+    // {
         
-    $name = $_POST["loginUsername"];
-    $pwd = $_POST["loginPassword"];
-    if($name === 'user' && $pwd === 'password')
-    {
-        header("Location: index.php");
-        exit();
-    }
-    else
-    {
-        echo("invalid");
-    }
-    }
+    // $name = $_POST["loginUsername"];
+    // $pwd = $_POST["loginPassword"];
+    // if($name === 'user' && $pwd === 'password')
+    // {
+    //     header("Location: index.php");
+    //     exit();
+    // }
+    // else
+    // {
+    //     echo("invalid");
+    // }
+    // }
 
     ?>
 </head>
@@ -33,7 +33,8 @@
       <span>Login</span>
     </div>
     
-    <form onsubmit="Lvalidate()">
+    <form {{--onsubmit="Lvalidate()"--}} action="{{ route('checkClient') }}" method="POST">
+      @csrf
       <div class="input_box">
         <input class="input-field" type="text" id="loginUsername" name="loginUsername" required>
         <label class="label" for="loginUsername">Username</label>
@@ -67,7 +68,7 @@
   </div>
 </div>
 
-<script src="JS/rac.js"></script>
+{{-- <script src="JS/rac.js"></script> --}}
 
 </body>
 </html>

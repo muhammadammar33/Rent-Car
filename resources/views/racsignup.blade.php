@@ -6,30 +6,30 @@
   <title>Sign Up - Car Dealership</title>
   <link rel="stylesheet" href="CSS/rac.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="JS/rac.js"></script>
-  <?php
-    if(isset($_POST["text-input"]) && isset($_POST["text-input"]))
-    {
+  {{-- <script src="JS/rac.js"></script> --}}
+  {{-- <?php 
+    // if(isset($_POST["text-input"]) && isset($_POST["text-input"]))
+    // {
         
-    $name = $_POST["signupName"];
-    $email = $_POST["signupEmail"];
-    $phonenumber = $_POST["signupPhone"];
-    $cnic = $_POST["signupCNIC"];
-    $dob = $_POST["signupDOB"];
-    $username = $_POST["signupUsername"];
-    $pwd = $_POST["signupPassword"];
-    // if($name === 'user' && $pwd === 'password')
-    // {
-    //     header("Location: index.php");
-    //     exit();
+    // $name = $_POST["signupName"];
+    // $email = $_POST["signupEmail"];
+    // $phonenumber = $_POST["signupPhone"];
+    // $cnic = $_POST["signupCNIC"];
+    // $dob = $_POST["signupDOB"];
+    // $username = $_POST["signupUsername"];
+    // $pwd = $_POST["signupPassword"];
+    // // if($name === 'user' && $pwd === 'password')
+    // // {
+    // //     header("Location: index.php");
+    // //     exit();
+    // // }
+    // // else
+    // // {
+    // //     echo("invalid");
+    // // }
     // }
-    // else
-    // {
-    //     echo("invalid");
-    // }
-    }
 
-    ?>
+    ?> --}}
 </head>
 <body >
 <div class="wrapper">
@@ -38,8 +38,8 @@
       <span>Sign Up</span>
     </div>
     
-    <form onsubmit="validate()">
-
+    <form {{--onsubmit="validate()"--}} action="{{ route('addClient') }}" method="POST">
+      @csrf
       <div class="input_box">
         <input class="input-field" type="email" id="signupEmail" name="signupEmail" required>
         <label class="label" for="signupEmail">Email</label>
@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<script src="JS/rac.js"></script>
+{{-- <script src="JS/rac.js"></script> --}}
 
 </body>
 </html>
