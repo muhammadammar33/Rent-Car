@@ -59,7 +59,8 @@ Route::controller(CarController::class)->group(function () {
     Route::get('/deleteCar/{id}', 'deleteCar')->name('deleteCar');
     Route::post('/updateCar/{id}', 'updateCar')->name('updateCar');
     Route::get('/updateCarPage/{id}', 'updateCarPage')->name('updateCarPage');
-    Route::get('/showCars/{term}', 'searchCar')->name('searchCar');
+    Route::get('/showCars/{term}','searchCar')->name('searchCar');
+    Route::get('/carlisting/{term}', 'searchCar')->name('carlisting');
 });
 
 // Route::get('/raclogin', function () {

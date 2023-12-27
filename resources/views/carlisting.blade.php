@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Listings</title>
+    <script src="JS/script.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -17,6 +18,10 @@
             color: #fff;
             padding: 1em;
             text-align: center;
+        }
+
+        .search{
+            margin-top: 10px;
         }
 
         .car-container {
@@ -73,7 +78,14 @@
         <h1>Car Listings</h1>
     </header>
 
-    <div class="car-container">
+    <div class="search">Search Car: 
+        <input type="text" id="search" onkeyup=search()>
+        <ul id="carList">
+            
+        </ul>
+    </div>
+
+    <div id="car-container" class="car-container">
         <!-- Car Card 1 -->
         @foreach ($data as $id=>$car)
         <a href="{{ route('viewCar', $car->id) }}">

@@ -15,8 +15,10 @@
                 <h1 class="text-center">Cars</h1>                
 
                 <div>Search Car: 
-                    <input id="search" type="text" placeholder="Enter Car Model" onkeyup="suggest()">
-                    <ul id="carlist"></ul>
+                    <input type="text" id="search" onkeyup=suggest()>
+                    <ul id="carList">
+                        
+                    </ul>
                 </div>
 
                 <a href="/addnewcar" class="btn btn-success btn-sm mb-3">Add new</a>

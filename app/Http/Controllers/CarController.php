@@ -134,20 +134,7 @@ class CarController extends Controller
     // }
 
     public function searchCar($term){
-        $cars = DB::table('cars')->where('Model', 'like', '%$term%')->get();
-        return ($cars);
-
-        // $car = DB::table('cars')
-        //             ->where('Model', $term)
-        //             ->first();
-        // return ($car);
-        // $cars = DB::table('cars')->where('make', 'like', '%' . $req->search . '%')->get();
-        // return view('carlisting', ['data' => $cars]);
-        // $cars = DB::table('cars')->where('make', 'like', '%' . $req->search . '%')->get();
-        // return view('carlisting', ['data' => $cars]);
-        // $cars = DB::table('cars')->where('make', 'like', '%' . $req->search . '%')->get();
-        // return view('carlisting', ['data' => $cars]);
-        // $cars = DB::table('cars')->where('make', 'like', '%' . $req->search . '%')->get();
-        // return view('carlisting', ['data' => $cars]);
+        $cars2 = DB::table('cars')->where ('Model','like',"$term%")->get();
+        return ($cars2);
     }
 }
