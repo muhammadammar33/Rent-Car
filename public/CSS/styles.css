@@ -110,8 +110,38 @@ li {
     margin: 30px;
 }
 
+.top-b-user {
+    float: right;
+    margin: 5% 2% 0 0;
+}
+
+.user-name {
+    color: rgb(65, 63, 63);
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 5px solid rgb(65, 63, 63);
+    border-radius: 10px;
+    background-color: red;
+    text-decoration: none;
+    max-height: 40px;
+    float: right;
+    margin: 5% 1% 0 1%;
+    text-align: justify;
+}
+
+.top-logout {
+    float: right;
+    margin: 5% 5% 0 1%;
+    border: 5px solid rgb(65, 63, 63);
+    border-radius: 10px;
+}
+
+.top-logout:hover {
+    border: 5px solid red;
+}
+
 .top-buttons {
-    color: black;
+    color: rgb(65, 63, 63);
     background-color: red;
     height: 30px;
     width: 80px;
@@ -306,4 +336,100 @@ li {
 .review p {
     padding: 0 10px 0 10px;
     font-family: 'Poppins', sans-serif;
+}
+
+.user-pic {
+    border-radius: 50%;
+    max-height: 40px;
+    border: 2px solid red;
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Car Details Page */
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(87, 85, 85);
+}
+
+.container .content h1 {
+    font-size: 52px;
+    letter-spacing: 2px;
+}
+
+.features {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.make,
+.model,
+.year,
+.color,
+.number {
+    width: 15%;
+    height: 30%;
+    padding: 2%;
+    margin: 4%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: red;
+    border: 10px solid red;
+}
+
+.make:hover,
+.model:hover,
+.year:hover,
+.color:hover,
+.number:hover {
+    background-color: red;
+    color: rgb(65, 63, 63);
+    border-color: rgb(22, 22, 22);
+}
+
+.car-detail-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-btn {
+    color: rgb(65, 63, 63);
+    background-color: red;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    border: 5px solid rgb(65, 63, 63);
+    border-radius: 10px;
+    height: 40px;
+}
+
+.car-btn:hover {
+    color: red;
+    background-color: rgb(65, 63, 63);
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    border: 5px solid red;
+    border-radius: 10px;
+    height: 40px;
 }

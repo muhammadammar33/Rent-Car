@@ -9,47 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
-<style>
-    .contact{
-        text-align: center;
-    }
-
-    .contact-details {
-        margin-top: 20px;
-    }
-
-    .contact-details p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5px 0;
-    }
-
-    .contact-details i {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        padding-top: 6px;
-    }
-
-    .contact-details a {
-        color: #888;
-        text-decoration: none;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-
-    .contact-details a:hover {
-        text-decoration: underline;
-    }
-
-    .developer-credits {
-        margin-top: 30px;
-        font-style: italic;
-        color: #888;
-    }
-
-</style>
 <body>
     <div class="main" id="home">
         <div class="upper">
@@ -79,10 +38,12 @@
                 </div>
             </div>
             <div class="right">
-                <div class="top-b">
-                    <a href="./raclogin"><button class="top-buttons" type="button">LOGIN</button></a>
-                    <a href="./racsignup"><button class="top-buttons" type="button">SIGNUP</button></a>
+                <a class="top-logout" href="/logout"><button class="top-buttons logout" type="button">Log Out</button></a>
+                <span class="fs-5 user-name">{{ session('client') }}</span>
+                <div class="top-b-user">                    
+                    <a href="#"><img class="user-pic" src="../Images/Owner.png" alt="User"></a>
                 </div>
+                
             </div>
         </div>
         <div class="below">
@@ -225,31 +186,8 @@
                     <!-- </a> -->
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    {{-- Contact Us Section --}}
-    <div id="Contact Us" class="contact">
-        <h1 class="white">Thank You for Visiting!</h1>
-
-        <p class="red">This is the ending page of our website. If you have any questions or need assistance, feel free to contact us:</p>
-
-        <div class="contact-details">
-            <p class="red"><i class='bx bx-phone bx-sm'></i> Phone: +123 456 789</p>
-            <p class="red"><i class='bx bx-envelope bx-sm' ></i> Email: info@example.com</p>
-            <p class="red"><i class='bx bxl-whatsapp bx-sm' ></i> WhatsApp: <a href="https://wa.me/123456789" target="_blank">Send a Message</a></p>
-            <p class="red"><i class='bx bxl-instagram bx-sm' ></i> Instagram: <a href="https://www.instagram.com/example/" target="_blank">@example</a></p>
-            <p class="red"><i class='bx bxl-facebook-circle bx-sm'></i> Facebook: <a href="https://www.facebook.com/example" target="_blank">Example Page</a></p>
-        </div>
-
-        <div class="developer-credits">
-            <p class="white">Credits to Developers:</p>
-            <p class="red">Ammar</p>
-            <p class="red">Javaria</p>
-            <p class="red">Huzaifa</p>
-        </div> 
-
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

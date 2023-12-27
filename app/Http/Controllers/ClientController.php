@@ -37,11 +37,21 @@ class ClientController extends Controller
                     ->where('password', $req->loginPassword)
                     ->first();
 
-        if ($client) {
+        $admin = DB::table('admins')
+                    ->where('name', $req->loginUsername)
+                    ->where('password', $req->loginPassword)
+                    ->first();
+
+        if ($admin) {
+            $data =  $req->input();
+            $req->session()->put('admin', $data['loginUsername']);
+            return redirect("/admindashboard");
+        }
+        else if ($client) {
             $data =  $req->input();
             $req->session()->put('client', $data['loginUsername']);
             // echo session('client');
-            return redirect("/dashboard");
+            return redirect("/user");
         } else {
             echo "<h1>Client not found</h1>";
         }
